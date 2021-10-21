@@ -15,4 +15,20 @@ int led_encendido = 0;            // 0 Led Encendido --> Ninguno
 // ================================================
 // Modulo Inicializacion y Configuracion
 // ================================================
-// fin
+// -----
+void setup()
+{
+  pinMode(led_rojo_PIN , OUTPUT);     // Definimos el PIN del Led Rojo como SALIDA
+  pinMode(led_amarillo_PIN , OUTPUT); // Definimos el PIN del Led Amarillo como SALIDA
+  pinMode(led_verde_PIN , OUTPUT);    // Definimos el PIN del Led Verde como SALIDA
+ 
+  digitalWrite(led_rojo_PIN, LOW);    // Inicialmente apagamos todos los leds
+  digitalWrite(led_amarillo_PIN, LOW);
+  digitalWrite(led_verde_PIN, LOW); v
+   
+  pinMode(pulsador_PIN, INPUT);       // Definimos el PIN del Pulsador como ENTRADA
+}
+ 
+// ================================================
+// Bucle Programa
+// ================================================                 

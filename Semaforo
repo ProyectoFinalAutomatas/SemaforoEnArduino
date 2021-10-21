@@ -53,4 +53,20 @@ void loop()
     digitalWrite(led_verde_PIN, LOW);   
   }
   //fin
+ // Encendemos el Led Amarillo y apagamos el Rojo y el Verde
+  if (led_encendido == 2) {
+    digitalWrite(led_rojo_PIN, LOW);   
+    digitalWrite(led_amarillo_PIN, HIGH);
+    digitalWrite(led_verde_PIN, LOW);  
+  }
  
+  // Encendemos el Led Verde y apagamos el Rojo y el Amarillo
+  if (led_encendido == 3) {
+    digitalWrite(led_rojo_PIN, LOW);   
+    digitalWrite(led_amarillo_PIN, LOW);
+    digitalWrite(led_verde_PIN, HIGH);  
+  }
+   
+  while (digitalRead(pulsador_PIN) == HIGH);   // Si el Pulsador sigue presionado no continuamos
+                                               // Cuando el Pulsador no está presionado seguimos con el Bucle Pincipal
+}
